@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DesktopUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DesktopUI"
+    xmlns:viewmodel ="clr-namespace:DesktopUI.ViewModel"
+    x:DataType="viewmodel:AppShellViewModel"
+    xmlns:view="clr-namespace:DesktopUI.View"
+    Shell.FlyoutBehavior="Locked"
+    Shell.FlyoutWidth="200"
+    Shell.NavBarIsVisible="False"
+    FlyoutFooter="Please help me"
+    FlyoutBackgroundColor="#11282c34">
+
+    <FlyoutItem Title="Dashboard"
+                x:Name="AdminPage">
+        <ShellContent ContentTemplate="{DataTemplate view:AdminMainPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Dashboard"
+                x:Name="AuthorizedPersonelPage">
+        <ShellContent ContentTemplate="{DataTemplate view:AuthorizedPersonelMainPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Login"
+                x:Name="LoginPage">
+        
+        <ShellContent ContentTemplate="{DataTemplate view:LoginPage}"/>
+        
+    </FlyoutItem>
+
+    <FlyoutItem Title="Register"
+                x:Name="RegisterPage">
+        
+        <ShellContent ContentTemplate="{DataTemplate view:RegisterPage}"/>
+        
+    </FlyoutItem>
+
+    <!--<ShellContent Title="Login" ContentTemplate="{DataTemplate view:LoginPage}"/>
+    <ShellContent Title="Register" ContentTemplate="{DataTemplate view:RegisterPage}"/>-->
+</Shell>
